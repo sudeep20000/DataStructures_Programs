@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 struct node
 {
     int data;
     struct node *next;
 };
+
 void LinkedListTraversal(struct node *ptr)
 {
     while (ptr != NULL)
@@ -13,6 +15,7 @@ void LinkedListTraversal(struct node *ptr)
         ptr = ptr->next;
     }
 }
+
 struct node *LinkListInsertionAtFirst(struct node *head, int data)
 {
     struct node *ptr = (struct node *)malloc(sizeof(struct node));
