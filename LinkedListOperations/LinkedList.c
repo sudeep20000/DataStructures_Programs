@@ -15,6 +15,7 @@ void LinkedListTraversal(struct node *ptr)
         ptr = ptr->next;
     }
 }
+
 int main()
 {
 
@@ -22,16 +23,20 @@ int main()
     struct node *second;
     struct node *third;
 
+    // Allocated memory for nodes in the linked list in heap
     head = (struct node *)malloc(sizeof(struct node));
     second = (struct node *)malloc(sizeof(struct node));
     third = (struct node *)malloc(sizeof(struct node));
 
+    // Linked First and Second node
     head->data = 7;
     head->next = second;
 
+    // Linked second and Third node
     second->data = 11;
     second->next = third;
 
+    // Terminates the list at the Third node
     third->data = 23;
     third->next = NULL;
 
