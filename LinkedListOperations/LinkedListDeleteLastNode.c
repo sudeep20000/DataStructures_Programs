@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 struct node
+
 {
     int data;
     struct node *next;
@@ -14,19 +15,21 @@ void LinkedListTraversal(struct node *ptr)
         ptr = ptr->next;
     }
 }
+
 struct node *LinkedListDeletionLastNode(struct node *head)
 {
     struct node *p = head;
     struct node *q = head->next;
-    while(q->next!=NULL)
+    while (q->next != NULL)
     {
-        p=p->next;
-        q=q->next;
+        p = p->next;
+        q = q->next;
     }
-    p->next=NULL;
+    p->next = NULL;
     free(q);
     return head;
 }
+
 int main()
 {
     struct node *head;
@@ -50,6 +53,7 @@ int main()
 
     fourth->data = 37;
     fourth->next = NULL;
+
     printf("Linked list before deletion:\n");
     LinkedListTraversal(head);
     printf("Linked list after deletion:\n");
