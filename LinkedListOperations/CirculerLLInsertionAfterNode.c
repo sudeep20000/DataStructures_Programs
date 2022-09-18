@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 struct node
 {
     int data;
     struct node *next;
 };
+
 void LinkedListTraversal(struct node *head)
 {
     struct node *ptr = head;
@@ -16,6 +18,7 @@ void LinkedListTraversal(struct node *head)
 
     } while (ptr != head);
 }
+
 struct node *CirculerLLInsertAfterNode(struct node *head, struct node *PrevNode, int data)
 {
     struct node *ptr = (struct node *)malloc(sizeof(struct node));
@@ -24,6 +27,7 @@ struct node *CirculerLLInsertAfterNode(struct node *head, struct node *PrevNode,
     PrevNode->next = ptr;
     return head;
 }
+
 int main()
 {
     struct node *head;
@@ -42,6 +46,7 @@ int main()
 
     third->data = 45;
     third->next = head;
+    
     printf("Linked list before insertion:\n");
     LinkedListTraversal(head);
     head = CirculerLLInsertAfterNode(head, third, 97);
