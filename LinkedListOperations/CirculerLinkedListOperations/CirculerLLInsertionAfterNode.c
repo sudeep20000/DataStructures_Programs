@@ -46,7 +46,7 @@ int main()
 
     third->data = 45;
     third->next = head;
-    
+
     printf("Linked list before insertion:\n");
     LinkedListTraversal(head);
     head = CirculerLLInsertAfterNode(head, third, 97);

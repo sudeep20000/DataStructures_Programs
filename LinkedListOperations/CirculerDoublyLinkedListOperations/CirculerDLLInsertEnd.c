@@ -20,20 +20,19 @@ void LinkedListTraversal(struct node *head)
     } while (ptr != head);
 }
 
-struct node *CircularDLLInsertFirst(struct node *head, int data)
+struct node *CircularDLLInsertEnd(struct node *head, int data)
 {
-    struct node *p = (struct node *)malloc(sizeof(struct node));
-    struct node *ptr = head->next;
-    while (ptr->next != head)
+    struct node *ptr = (struct node *)malloc(sizeof(struct node));
+    struct node *p = head;
+    while (p->next != head)
     {
-        ptr = ptr->next;
+        p = p->next;
     }
-    p->data = data;
-    ptr->next->prev = p;
-    p->next = ptr->next;
-    ptr->next = p;
-    p->prev = ptr;
-    head = p;
+    ptr->data = data;
+    head->prev = ptr;
+    ptr->next = p->next;
+    p->next = ptr;
+    ptr->prev = p;
     return head;
 }
 
@@ -72,7 +71,7 @@ int main()
 
     printf("Linked list before insertion:\n");
     LinkedListTraversal(head);
-    head = CircularDLLInsertFirst(head, 3);
+    head = CircularDLLInsertEnd(head, 3);
     printf("Linked list after insertion:\n");
     LinkedListTraversal(head);
     return 0;
