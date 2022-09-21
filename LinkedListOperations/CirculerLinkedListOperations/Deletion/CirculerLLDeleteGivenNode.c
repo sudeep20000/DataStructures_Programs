@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 struct node
 {
     int data;
     struct node *next;
 };
+
 void LinkedListTraversal(struct node *head)
 {
     struct node *ptr = head;
@@ -16,6 +18,7 @@ void LinkedListTraversal(struct node *head)
 
     } while (ptr != head);
 }
+
 struct node *CirculerLLDeleteFromGivenIndex(struct node *head, int value)
 {
     struct node *p = head;
@@ -32,6 +35,7 @@ struct node *CirculerLLDeleteFromGivenIndex(struct node *head, int value)
     }
     return head;
 }
+
 int main()
 {
     struct node *head;
@@ -55,6 +59,7 @@ int main()
 
     fourth->data = 37;
     fourth->next = head;
+    
     printf("Linked list before deletion:\n");
     LinkedListTraversal(head);
     printf("Linked list after deletion:\n");
