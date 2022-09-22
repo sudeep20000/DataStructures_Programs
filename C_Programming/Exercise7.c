@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+
 struct drivers
 {
     char name[20];
@@ -7,6 +8,7 @@ struct drivers
     int kms;
     int license;
 };
+
 int main()
 {
     struct drivers d1, d2, d3, d4;

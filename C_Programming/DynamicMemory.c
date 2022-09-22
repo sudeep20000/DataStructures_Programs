@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 int main()
-{ // Using malloc
+{
+    // Using malloc
     int *p;
     int n;
     printf("Enter the number of element you want:\n");
@@ -16,6 +18,7 @@ int main()
     {
         printf("The value of the %d element is:%d\n", i, p[i]);
     }
+
     // Using calloc
     int *p;
     int n;
@@ -31,6 +34,7 @@ int main()
     {
         printf("The value of the %d element is:%d\n", i, p[i]);
     }
+
     // Using realloc
     int *p;
     int n;
