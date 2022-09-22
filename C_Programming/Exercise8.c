@@ -8,12 +8,13 @@ int main()
     int i = 0;
     while (i < 3)
     {
-        printf("Employee %d:how many characters have in your empid:\n", i + 1);
+        printf("\nEmployee %d:how many characters have in your empid:", i + 1);
         scanf("%d", &chars);
         ptr = (char *)malloc((chars + 1) * sizeof(char));
         printf("Enter your employee id:");
         scanf("%s", ptr);
-        printf("Your employee id is %s\n", ptr);
+        printf("Your employee id is %s", ptr);
+        printf("\n");
         free(ptr);
         i++;
     }
