@@ -50,7 +50,7 @@ int pop(struct stack *ptr)
     if (isEmpty(ptr))
     {
         printf("Stack underflow!!!\n");
-        }
+    }
     else
     {
         int val = ptr->arr[ptr->top];
