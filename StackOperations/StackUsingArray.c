@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 struct stack
 {
     int top;
     int size;
     int *arr;
 };
+
 int isEmpty(struct stack *ptr)
 {
     if (ptr->top == -1)
@@ -17,6 +19,7 @@ int isEmpty(struct stack *ptr)
         return 0;
     }
 }
+
 int isFull(struct stack *ptr)
 {
     if (ptr->top == ptr->size - 1)
@@ -28,6 +31,7 @@ int isFull(struct stack *ptr)
         return 0;
     }
 }
+
 void push(struct stack *ptr, int value)
 {
     if (isFull(ptr))
@@ -40,13 +44,13 @@ void push(struct stack *ptr, int value)
         ptr->arr[ptr->top] = value;
     }
 }
+
 int pop(struct stack *ptr)
 {
     if (isEmpty(ptr))
     {
         printf("Stack underflow!!!\n");
-        
-    }
+        }
     else
     {
         int val = ptr->arr[ptr->top];
@@ -54,6 +58,7 @@ int pop(struct stack *ptr)
         return val;
     }
 }
+
 int main()
 {
     struct stack *s = (struct stack *)malloc(sizeof(struct stack));
