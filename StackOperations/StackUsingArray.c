@@ -62,9 +62,9 @@ int pop(struct stack *ptr)
 int main()
 {
     struct stack *s = (struct stack *)malloc(sizeof(struct stack));
-    s->arr = (int *)malloc(s->size * sizeof(int));
-    s->size = 9;
     s->top = -1;
+    s->size = 9;
+    s->arr = (int *)malloc(s->size * sizeof(int));
     printf("The stack was created succsessfully!!!\n");
     printf("The stack is empty %d\n", isEmpty(s));
     printf("The stack is full %d\n", isFull(s));
