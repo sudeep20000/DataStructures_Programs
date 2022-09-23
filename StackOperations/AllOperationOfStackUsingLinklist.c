@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 struct node
 {
     int data;
     struct node *next;
 };
+
 struct node *top = NULL;
 void linkedListTraversal(struct node *ptr)
 {
@@ -26,6 +28,7 @@ int isEmpty(struct node *top)
         return 0;
     }
 }
+
 int isFull(struct node *top)
 {
     struct node *p = (struct node *)malloc(sizeof(struct node));
@@ -38,6 +41,7 @@ int isFull(struct node *top)
         return 0;
     }
 }
+
 struct node *push(struct node *top, int x)
 {
     if (isFull(top))
@@ -53,6 +57,7 @@ struct node *push(struct node *top, int x)
         return top;
     }
 }
+
 int pop(struct node *t)
 {
     if (isEmpty(t))
@@ -68,6 +73,7 @@ int pop(struct node *t)
         return x;
     }
 }
+
 int main()
 {
 
@@ -76,7 +82,7 @@ int main()
     top = push(top, 8);
     linkedListTraversal(top);
 
-    int element = pop(top);  
+    int element = pop(top);
     printf("Popped element is %d\n", element);
     linkedListTraversal(top);
     return 0;
