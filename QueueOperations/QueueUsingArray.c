@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 struct queue
 {
     int size;
@@ -7,6 +8,7 @@ struct queue
     int r;
     int *arr;
 };
+
 int isFull(struct queue *q)
 {
     if (q->r == q->size - 1)
@@ -18,6 +20,7 @@ int isFull(struct queue *q)
         return 0;
     }
 }
+
 int isEmpty(struct queue *q)
 {
     if (q->r == q->f)
@@ -29,9 +32,10 @@ int isEmpty(struct queue *q)
         return 0;
     }
 }
+
 void enqueue(struct queue *q, int val)
 {
-    if (isFull(q))  
+    if (isFull(q))
     {
         printf("The Queue is Full");
     }
@@ -39,9 +43,10 @@ void enqueue(struct queue *q, int val)
     {
         q->r++;
         q->arr[q->r] = val;
-        printf("Enqueued element %d\n",val);
+        printf("Enqueued element %d\n", val);
     }
 }
+
 int dequeue(struct queue *q)
 {
     int a = -1;
@@ -56,6 +61,7 @@ int dequeue(struct queue *q)
         return a;
     }
 }
+
 int main()
 {
     struct queue q;

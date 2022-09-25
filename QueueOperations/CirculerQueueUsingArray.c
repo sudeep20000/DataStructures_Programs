@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 struct CirculerQueue
 {
     int size;
@@ -7,6 +8,7 @@ struct CirculerQueue
     int r;
     int *arr;
 };
+
 int isFull(struct CirculerQueue *q)
 {
     if ((q->r + 1) % (q->size) == q->f)
@@ -18,6 +20,7 @@ int isFull(struct CirculerQueue *q)
         return 0;
     }
 }
+
 int isEmpty(struct CirculerQueue *q)
 {
     if (q->r == q->f)
@@ -29,6 +32,7 @@ int isEmpty(struct CirculerQueue *q)
         return 0;
     }
 }
+
 void enqueue(struct CirculerQueue *q, int val)
 {
     if (isFull(q))
@@ -42,6 +46,7 @@ void enqueue(struct CirculerQueue *q, int val)
         printf("Enqueued element %d\n", val);
     }
 }
+
 int dequeue(struct CirculerQueue *q)
 {
     int a = -1;
@@ -56,6 +61,7 @@ int dequeue(struct CirculerQueue *q)
         return a;
     }
 }
+
 int main()
 {
     struct CirculerQueue q;
@@ -77,7 +83,7 @@ int main()
     {
         printf("The CirculerQueue is empty\n");
     }
-    if(isFull(&q))
+    if (isFull(&q))
     {
         printf("The CirculerQueue is full\n");
     }
