@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 struct stack
 {
     int size;
     int top;
     int *arr;
 };
+
 int isEmpty(struct stack *ptr)
 {
     if (ptr->top == -1)
@@ -17,6 +19,7 @@ int isEmpty(struct stack *ptr)
         return 0;
     }
 }
+
 int isFull(struct stack *ptr)
 {
     if (ptr->top == ptr->size - 1)
@@ -28,6 +31,7 @@ int isFull(struct stack *ptr)
         return 0;
     }
 }
+
 void push(struct stack *ptr, int val)
 {
     if (isFull(ptr))
@@ -40,6 +44,7 @@ void push(struct stack *ptr, int val)
         ptr->arr[ptr->top] = val;
     }
 }
+
 int pop(struct stack *ptr)
 {
     if (isEmpty(ptr))
@@ -53,6 +58,7 @@ int pop(struct stack *ptr)
         return ele;
     }
 }
+
 int peek(struct stack *ptr, int i)
 {
     int ArrayIndex = ptr->top - i + 1;
@@ -66,14 +72,17 @@ int peek(struct stack *ptr, int i)
         return ptr->arr[ArrayIndex];
     }
 }
+
 int stackTop(struct stack *ptr)
 {
     return ptr->arr[ptr->top];
 }
+
 int stackBottom(struct stack *ptr)
 {
     return ptr->arr[0];
 }
+
 int main()
 {
     struct stack *s = (struct stack *)malloc(sizeof(struct stack));
@@ -82,7 +91,7 @@ int main()
     s->arr = (int *)malloc(s->size * sizeof(int));
     printf("stack has been created successfully\n");
     printf("Before pushing,Full: %d\n", isFull(s));
-    printf("Before poping,Empty: %d\n", isEmpty(s));
+    printf("Before pushing,Empty: %d\n", isEmpty(s));
     push(s, 23);
     push(s, 43);
     push(s, 53);

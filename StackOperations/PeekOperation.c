@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 struct stack
 {
     int size;
     int top;
     int *arr;
 };
+
 int isEmpty(struct stack *ptr)
 {
     if (ptr->top == -1)
@@ -17,6 +19,7 @@ int isEmpty(struct stack *ptr)
         return 0;
     }
 }
+
 int isFull(struct stack *ptr)
 {
     if (ptr->top == ptr->size - 1)
@@ -28,6 +31,7 @@ int isFull(struct stack *ptr)
         return 0;
     }
 }
+
 void push(struct stack *ptr, int val)
 {
     if (isFull(ptr))
@@ -40,6 +44,7 @@ void push(struct stack *ptr, int val)
         ptr->arr[ptr->top] = val;
     }
 }
+
 int pop(struct stack *ptr)
 {
     if (isEmpty(ptr))
@@ -53,6 +58,7 @@ int pop(struct stack *ptr)
         return ele;
     }
 }
+
 int peek(struct stack *ptr, int i)
 {
     int ArrayIndex = ptr->top - i + 1;
@@ -66,6 +72,7 @@ int peek(struct stack *ptr, int i)
         return ptr->arr[ArrayIndex];
     }
 }
+
 int main()
 {
     struct stack *s = (struct stack *)malloc(sizeof(struct stack));
