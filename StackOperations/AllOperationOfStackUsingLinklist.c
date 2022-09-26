@@ -8,6 +8,7 @@ struct node
 };
 
 struct node *top = NULL;
+
 void linkedListTraversal(struct node *ptr)
 {
     while (ptr != NULL)
