@@ -59,7 +59,7 @@ char pop(struct stack *ptr)
     }
 }
 
-int parenthisisMatch(char *exp)
+int parenthesisMatch(char *exp)
 {
     struct stack *sp;
     sp->size = 100;
@@ -90,7 +90,7 @@ int parenthisisMatch(char *exp)
 int main()
 {
     char *exp = "(3*1)(1-1)(9+1)";
-    if (parenthisisMatch(exp))
+    if (parenthesisMatch(exp))
     {
         printf("The parenthesis is matching\n");
     }
