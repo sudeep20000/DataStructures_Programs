@@ -66,7 +66,7 @@ int parenthesisMatch(char *exp)
     sp->top = -1;
     sp->arr = (char *)malloc(sp->size * sizeof(char));
 
-    for (int i = 0; i < exp[i] != '\0'; i++)
+    for (int i = 0; exp[i] != '\0'; i++)
     {
         if (exp[i] == '(')
         {
