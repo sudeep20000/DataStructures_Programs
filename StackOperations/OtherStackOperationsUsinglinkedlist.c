@@ -89,6 +89,21 @@ int peek(int pos)
     return -1;
 }
 
+int stackTop()
+{
+    return top->data;
+}
+
+int stackBottom()
+{
+    struct node *p = top;
+    while (p->next != NULL)
+    {
+        p = p->next;
+    }
+    return p->data;
+}
+
 int main()
 {
 
@@ -101,6 +116,7 @@ int main()
     {
         printf("The value of position %d is: %d\n", i, peek(i));
     }
-
+    printf("The top of the stack is:%d\n", stackTop());
+    printf("The bottom of the stack is:%d\n", stackBottom());
     return 0;
 }
