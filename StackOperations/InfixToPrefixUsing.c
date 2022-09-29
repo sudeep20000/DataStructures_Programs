@@ -128,9 +128,9 @@ char *infixToPostfix(char *infix)
 int main()
 {
     char exp[20];
-    printf("Enter your infix expression:");
+    printf("Enter your Infix expression:");
     scanf("%s", &exp);
     char *infix = exp;
-    printf("The Postfix expression is:%s", infixToPostfix(infix));
+    printf("The Postfix expression of %s is: %s", exp, infixToPostfix(infix));
     return 0;
 }
