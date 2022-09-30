@@ -72,7 +72,7 @@ int matched(char a, char b)
 
 int parenthesisMatch(char *exp)
 {
-    struct stack *sp;
+    struct stack *sp = (struct stack *)malloc(sizeof(struct stack));
     sp->size = 100;
     sp->top = -1;
     sp->arr = (char *)malloc(sp->size * sizeof(char));
@@ -103,7 +103,10 @@ int parenthesisMatch(char *exp)
 
 int main()
 {
-    char *exp = "[{3*1(1-1)(9+1)]";
+    char str[100];
+    printf("Enter the Expression:");
+    scanf("%s", &str);
+    char *exp = str;
     if (parenthesisMatch(exp))
     {
         printf("The parenthesis is matching\n");
