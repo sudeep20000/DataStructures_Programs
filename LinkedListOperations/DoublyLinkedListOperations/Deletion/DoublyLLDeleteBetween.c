@@ -17,7 +17,7 @@ void LinkedListTraversal(struct node *ptr)
     }
 }
 
-struct node *DoublyLLDeleteFirst(struct node *head, int index)
+struct node *DoublyLLDeleteBetween(struct node *head, int index)
 {
     struct node *p = head;
     int i = 0;
@@ -67,7 +67,7 @@ int main()
 
     printf("Linked list before deletion:\n");
     LinkedListTraversal(head);
-    head = DoublyLLDeleteFirst(head, 2);
+    head = DoublyLLDeleteBetween(head, 2);
     printf("Linked list after deletion:\n");
     LinkedListTraversal(head);
     return 0;
