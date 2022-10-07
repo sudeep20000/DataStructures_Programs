@@ -16,12 +16,12 @@ void LinkedListTraversal(struct node *ptr)
     }
 }
 
-struct node *LinkedListInsertionGivenNode(struct node *head, struct node *PrevNode, int data)
+struct node *LinkedListInsertionGivenNode(struct node *head, struct node *GN, int data)
 {
     struct node *ptr = (struct node *)malloc(sizeof(struct node));
     ptr->data = data;
-    ptr->next = PrevNode->next;
-    PrevNode->next = ptr;
+    ptr->next = GN->next;
+    GN->next = ptr;
     return head;
 }
 
