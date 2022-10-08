@@ -59,7 +59,7 @@ int main()
 
     fourth->data = 37;
     fourth->next = head;
-    
+
     printf("Linked list before deletion:\n");
     LinkedListTraversal(head);
     printf("Linked list after deletion:\n");
