@@ -65,7 +65,9 @@ int main()
     struct stack *s;
     s = (struct stack *)malloc(sizeof(struct stack));
     s->top = -1;
-    s->size = 5;
+    printf("Enter the size of the Stack:");
+    scanf("%d", &s->size);
+    // s->size = 5;
     s->arr = (int *)malloc(s->size * sizeof(int));
     printf("Stack created!!!\n");
     printf("Stack is Full is:%d\n", isFull(s));
