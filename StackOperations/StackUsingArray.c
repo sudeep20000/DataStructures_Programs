@@ -8,7 +8,7 @@ struct stack
     int *arr;
 };
 
-// Arrow Operator(->):1st Dereference Then Add .operator
+// Arrow Operator(->):1st Dereference Then Add (Dot).operator
 
 int isEmpty(struct stack *ptr)
 {
