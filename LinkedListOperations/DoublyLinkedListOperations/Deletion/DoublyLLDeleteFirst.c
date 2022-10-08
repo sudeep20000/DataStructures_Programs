@@ -8,8 +8,9 @@ struct node
     struct node *next;
 };
 
-void LinkedListTraversal(struct node *ptr)
+void LinkedListTraversal(struct node *head)
 {
+    struct node *ptr = head;
     while (ptr != NULL)
     {
         printf("Element:%d\n", ptr->data);
