@@ -18,11 +18,11 @@ void LinkedListTraversal(struct node *head)
     }
 }
 
-struct node *DoublyLLDeleteAfterNode(struct node *head, struct node *third)
+struct node *DoublyLLDeleteAfterNode(struct node *head, struct node *GN)
 {
-    third->prev->next = third->next;
-    third->next->prev = third->prev;
-    free(third);
+    GN->prev->next = GN->next;
+    GN->next->prev = GN->prev;
+    free(GN);
     return head;
 }
 
