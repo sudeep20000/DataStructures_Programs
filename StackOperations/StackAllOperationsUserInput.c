@@ -72,7 +72,7 @@ int main()
     printf("Stack created!!!\n");
     printf("Stack is Full is:%d\n", isFull(s));
     printf("Stack is Empty is:%d\n", isEmpty(s));
-    while (i < 6)
+    while (i < s->size)
     {
         printf("Enter a number: \t1 for push \t2 for pop\n");
         scanf("%d", &n);
