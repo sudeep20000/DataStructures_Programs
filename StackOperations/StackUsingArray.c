@@ -8,6 +8,8 @@ struct stack
     int *arr;
 };
 
+// Arrow Operator(->):1st Dereference Then Add .operator
+
 int isEmpty(struct stack *ptr)
 {
     if (ptr->top == -1)
