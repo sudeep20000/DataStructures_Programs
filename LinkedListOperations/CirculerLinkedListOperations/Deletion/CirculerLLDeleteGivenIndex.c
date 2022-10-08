@@ -61,7 +61,7 @@ int main()
     printf("Linked list before deletion:\n");
     LinkedListTraversal(head);
     printf("Linked list after deletion:\n");
-    head = CirculerLLDeleteBetween(head, 2);
+    head = CirculerLLDeleteBetween(head, 1);
     LinkedListTraversal(head);
     return 0;
 }
