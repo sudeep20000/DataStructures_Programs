@@ -18,13 +18,13 @@ void LinkedListTraversal(struct node *head)
     }
 }
 
-struct node *DoublyLLInsertAfterNode(struct node *head, int data, struct node *prev)
+struct node *DoublyLLInsertAfterNode(struct node *head, int data, struct node *GN)
 {
     struct node *p = (struct node *)malloc(sizeof(struct node));
     p->data = data;
-    p->next = prev->next;
-    prev->next = p;
-    p->prev = prev;
+    p->next = GN->next;
+    GN->next = p;
+    p->prev = GN;
     return head;
 }
 
