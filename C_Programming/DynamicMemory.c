@@ -3,21 +3,21 @@
 
 int main()
 {
-    // Using malloc
-    int *p;
-    int n;
-    printf("Enter the number of element you want:\n");
-    scanf("%d", &n);
-    p = (int *)malloc(n * sizeof(int));
-    for (int i = 0; i < n; i++)
-    {
-        printf("Enter value of the %d element is\n", i);
-        scanf("%d", &p[i]);
-    }
-    for (int i = 0; i < n; i++)
-    {
-        printf("The value of the %d element is:%d\n", i, p[i]);
-    }
+    // // Using malloc
+    // int *p;
+    // int n;
+    // printf("Enter the number of element you want:\n");
+    // scanf("%d", &n);
+    // p = (int *)malloc(n * sizeof(int));
+    // for (int i = 0; i < n; i++)
+    // {
+    //     printf("Enter value of the %d element is\n", i);
+    //     scanf("%d", &p[i]);
+    // }
+    // for (int i = 0; i < n; i++)
+    // {
+    //     printf("The value of the %d element is:%d\n", i, p[i]);
+    // }
 
     // Using calloc
     int *p;
@@ -36,8 +36,8 @@ int main()
     }
 
     // Using realloc
-    int *p;
-    int n;
+    // int *p;
+    // int n;
     printf("Enter the size of new array of element you want:\n");
     scanf("%d", &n);
     p = (int *)realloc(p, n * sizeof(int));
