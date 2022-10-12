@@ -4,6 +4,7 @@
 int main()
 {
     // // Using malloc
+
     // int *p;
     // int n;
     // printf("Enter the number of element you want:\n");
@@ -19,7 +20,9 @@ int main()
     //     printf("The value of the %d element is:%d\n", i, p[i]);
     // }
 
+
     // Using calloc
+
     int *p;
     int n;
     printf("Enter the number of element you want:\n");
@@ -35,7 +38,9 @@ int main()
         printf("The value of the %d element is:%d\n", i, p[i]);
     }
 
+
     // Using realloc
+
     // int *p;
     // int n;
     printf("Enter the size of new array of element you want:\n");
