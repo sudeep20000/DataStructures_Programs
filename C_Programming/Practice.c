@@ -29,13 +29,14 @@ void print(char *p, int N)
     }
 }
 
-void TakeInput(int *ptr, int n)
+int *TakeInput(int *ptr, int n)
 {
     for (int i = 0; i < n; i++)
     {
         printf("Enter the number at index no %d:", i);
         scanf("%d", (ptr + i));
     }
+    return ptr;
 }
 
 int main()
@@ -94,7 +95,7 @@ int main()
     printf("Enter the size of array:");
     scanf("%d", &n);
     int *ptr = (int *)malloc(n * sizeof(int));
-    TakeInput(ptr, n);
+    ptr = TakeInput(ptr, n);
     for (int i = 0; i < n; i++)
     {
         printf("The number at index number %d is:%d\n", i, *(ptr + i));
