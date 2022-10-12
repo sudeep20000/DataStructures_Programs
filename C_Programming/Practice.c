@@ -91,6 +91,17 @@ int main()
     //     printf("The number at index number %d is:%d\n", i, *(ptr + i));
     // }
 
+    // int n;
+    // printf("Enter the size of array:");
+    // scanf("%d", &n);
+    // int *ptr = (int *)malloc(n * sizeof(int));
+    // ptr = TakeInput(ptr, n);
+    // for (int i = 0; i < n; i++)
+    // {
+    //     printf("The number at index number %d is:%d\n", i, *(ptr + i));
+    // }
+    // free(ptr);
+
     int n;
     printf("Enter the size of array:");
     scanf("%d", &n);
@@ -100,6 +111,15 @@ int main()
     {
         printf("The number at index number %d is:%d\n", i, *(ptr + i));
     }
-    free(ptr);
+
+    printf("Enter the New size of the array:");
+    scanf("%d", &n);
+    ptr = (int *)realloc(ptr, n * sizeof(int));
+    ptr = TakeInput(ptr, n);
+    for (int i = 0; i < n; i++)
+    {
+        printf("The number at index number %d is:%d\n", i, *(ptr + i));
+    }
+
     return 0;
 }
