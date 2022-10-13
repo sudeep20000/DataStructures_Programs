@@ -17,7 +17,7 @@ int main()
     char name[10];
     int i = 0;
     printf("\t----Welcome To RockPaperScissors Game----\t\n");
-    printf("Enter your name:\n");
+    printf("Enter your name:");
     scanf("%s", &name);
     int u_count = 0;
     int c_count = 0;
@@ -43,7 +43,7 @@ int main()
             printf("You choose Scissors\n");
             break;
         default:
-            printf("Enter valid input,%d is not valid input!!!!\n", n);
+            printf("%s you entered %d which is not valid input! Plz Select only those inputs which is given in the option.\n", name, n);
             goto end;
         }
         printf("Computer's turn=>\n");
@@ -82,8 +82,8 @@ int main()
         i++;
     }
     printf("\t----(Final Score)----\t\n");
-    printf("%s you win :%d times\n", name, u_count);
-    printf("Computer win :%d times\n", c_count);
+    printf("%s you won :%d times\n", name, u_count);
+    printf("Computer won :%d times\n", c_count);
     if (u_count > c_count)
     {
         printf("Congratulations!!!!%s you beat the computer.\n", name);
