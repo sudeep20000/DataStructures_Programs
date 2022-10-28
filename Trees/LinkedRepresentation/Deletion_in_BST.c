@@ -48,7 +48,7 @@ int isBST(struct node *root)
         return 1;
 }
 
-struct node *inorderPredecessor(struct node *root)
+struct node *inorderPredecessor(struct node *root) // Right most child of Left sub-tree
 {
     root = root->left;
     while (root->right != NULL)
@@ -61,11 +61,11 @@ struct node *inorderPredecessor(struct node *root)
 struct node *deleteNode(struct node *root, int value)
 {
     struct node *iPre;
-    if (root == NULL)
+    if (root == NULL) // If the node value is null
     {
         return NULL;
     }
-    if (root->left == NULL && root->right == NULL)
+    if (root->left == NULL && root->right == NULL) // Leaf node
     {
         free(root);
         return NULL;
@@ -73,17 +73,17 @@ struct node *deleteNode(struct node *root, int value)
     // Search for the node to be deleted
     if (value < root->data)
     {
-        root->left = deleteNode(root->left, value);
+        root->left = deleteNode(root->left, value); // Small the problem
     }
     else if (value > root->data)
     {
-        root->right = deleteNode(root->right, value);
+        root->right = deleteNode(root->right, value); // Small the problem
     }
 
     // Deletion strategy when the node is found
     else
     {
-        iPre = inorderPredecessor(root);
+        iPre = inorderPredecessor(root); // Inorder predecessor of the given node
         root->data = iPre->data;
         root->left = deleteNode(root->left, iPre->data);
     }
@@ -106,7 +106,7 @@ int main()
     //   / \
     //  1   4
 
-    // 5 1 2 4 6
+    // 1 3 4 5 6
 
     // Linked the root node with the left and right childern
     p->left = p1;
@@ -115,7 +115,7 @@ int main()
     p1->right = p4;
 
     InOrder(p);
-    deleteNode(p, 3);
+    deleteNode(p, 6);
     printf("\n|Root is %d|\n", p->data);
     InOrder(p);
 
